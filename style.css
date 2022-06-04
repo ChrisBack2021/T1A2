@@ -1,0 +1,477 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&display=swap");
+/* Below are variables used throughout css */
+:root {
+  --bg-color: rgba(128, 129, 129, 0.2);
+  --font-size: clamp( 0.6rem, 2vw + .75rem, 1.7rem);
+}
+
+/* R2 text component, font family and color. R3 graphical component, background image for all pages. */
+html {
+  font-family: "open sans", "sans serif";
+  background-image: url("images/iphone.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  color: white;
+}
+
+
+a {
+  color: white;
+}
+
+html a:hover {
+ color: blueviolet;
+  transform: scale(1.10);
+  transition: 0.3s;
+}
+
+
+* {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+}
+
+h1 {
+  font-size: clamp( 2rem, 6vw + 2rem, 6rem);
+}
+
+h2 {
+  font-size: clamp( 1rem, 1.5vw + 1rem, 4rem);
+}
+
+
+/* The below is for the index.html bar navigation. Also known as home page. */
+/* Text component, nav bar. */
+#navigation {
+  display: flex;
+  flex-direction: column;
+}
+
+#navigation > li {
+  list-style-type: none;
+  padding: 0.5rem;
+  display: flex;
+  justify-content: center;
+  font-size: clamp(1.1rem, 3vw + 0.75rem, 2.2rem);
+}
+
+/* home page navigation switches from  column to row once it hits 992px*/
+@media screen and (min-width: 992px) {
+    #navigation {
+    flex-direction: row;
+    color: white;
+  }
+  #navigation > li {
+    padding-right: 5rem;
+    padding-left: 5rem;
+  }
+}
+/* dropdown menu for navbar. The dropdown only applies for About me page, project and blogs. */
+ /* Text component, second nav bar for about me, projects and blog. */
+.listtop > li {
+  list-style: none;
+  position: relative;
+}
+
+.listtop > li {
+  background-color: (0,0,0,0.1);
+}
+
+.listtop > li:hover {
+   color: blueviolet;
+  transform: scale(1.1);
+  transition: 0.3s;
+}
+
+.dropdownimg {
+  border: 1px solid white;
+}
+
+.dropdownnav > li > ul {
+  display: none;
+  position: absolute;
+  padding: 1rem;
+}
+/* Below is for my dropdown menu to be able to be opened.  */
+@media screen and (max-width: 600px) {
+  .dropdownnav > li:focus-within > ul {
+    display: block;
+  }
+}
+  /* The below changes the dropdown navbar to a navbar that is evenly spaced at top of screen. */
+  @media screen and (min-width: 601px){
+   .dropdownimg {
+    display: none;
+  }
+
+  .dropdownnav > li > ul {
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    padding: 1rem;
+    list-style: none;
+    font-size: 2rem;
+  }
+/* R3 graphical component, background color for navbar. */
+  .listtop {
+    background-color: var(--bg-color);
+  }
+}
+
+footer {
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  position: static;
+  bottom: 0px;
+  width: 100%;
+  border-top: 1px solid gray;
+}
+
+.footer {
+  text-align: center;
+}
+
+
+.contacts {
+  display: flex;
+  justify-content: center;
+}
+/* R3 graphical component, icons for socials. */
+.contact-me {
+  padding: 1rem;
+  display: flex;
+  gap: clamp(1rem, 1.25vw + 1.5rem, 6rem);
+}
+
+.contact-me img {
+  width: clamp(1.5rem, 2.5vw + 1.5rem, 6rem);
+}
+
+/* Home page */
+#container {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+/* R2 text component - name */
+header {
+  font-size: clamp(1.25rem, 4vw + 0.075rem, 2.5rem);
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+}
+
+#aspirations {
+  padding-top: 0.5rem;
+  padding-bottom: 5%;
+  font-size: clamp(0.9rem, 2vw + 0.75rem, 2.2rem);
+}
+
+a {
+  text-decoration: none;
+}
+/* Contact details */
+#phoneandemail {
+  margin-top: 5rem;
+  text-align: center;
+}
+
+/* PC screen size change layout */
+@media screen and (min-width: 992px) {
+  h1 {
+    font-size: 6rem;
+  }
+  
+  #navigation {
+    font-size: 2rem;
+  }
+  .contact-me img {
+    width: 3rem;
+  }
+  .contact-me {
+    gap: 5rem;
+  }
+#phoneandemail {
+  margin-top: 20rem;
+}
+}
+
+/* Below is "about me" page* */
+#about-me-page {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 0 2rem;
+}
+/* R2 text component */
+#about-me-page h2 {
+  padding-top: 1rem;
+  margin-top: 1rem;
+  margin-bottom: 0.5em;
+  text-align: center;
+  font-weight: bolder;
+}
+/* R3 graphical component */
+#pictureofme {
+  border-radius: 5%;
+    width: 15rem;
+    height: 20rem;
+    margin-bottom: 1rem;
+  }
+/* R3 graphical component */
+#bluemountain {
+  border-radius: 50%;
+  height: 20rem;
+  display: block;
+  margin: auto;
+  padding: 1rem 0;
+}
+
+h3 {
+  text-align: center;
+  padding-top: 5em;
+}
+/* R2 text component */
+#intro {
+background-color: var(--bg-color);
+padding: 0.5rem;
+font-size: var(--font-size);
+}
+/* R2 text component */
+#myprolife,
+#hobbies {
+  background-color: var(--bg-color);
+  padding: 0.5rem;
+  margin: .5rem 0;
+  font-size: var(--font-size);
+}
+
+/* Resume. */
+#resume:hover {
+  color: blueviolet;
+}
+
+#resume {
+  font-size: clamp(1rem, 1.9vw + 1rem, 3rem);
+  padding: 2rem 0;
+  color: white;
+  display: flex;
+  justify-content: center;
+  
+}
+
+/* larger display for about me page */
+@media screen and (min-width: 992px) {
+  #aboutmetext {
+    display: flex;
+    flex-direction: row;
+  }
+
+  #myprolife,
+  #hobbies {
+    width: 50%;
+    text-align: center;
+  }
+  #myprolife {
+    margin-right: 4rem;
+  }
+
+  #aboutme {
+    margin-bottom: 1rem;
+    text-align: center;
+    margin-top: 1rem;
+  }
+
+  #pictureofme {
+    width: 22rem;
+    height: 29rem;
+  }
+  #bluemountain {
+    width: 25rem;
+    height: 35rem;
+  }
+}
+
+/* Below is for Projects page */
+.projects {
+  padding: 1rem 1rem 1rem 2rem;
+  display: flex;
+  flex-direction: column;
+  font-size: var(--font-size);
+  text-align: center;
+}
+
+.projectinfo {
+  background-color: var(--bg-color);
+}
+/* R3 graphical component */
+#gardensnsd {
+  width: 80%;
+  display: block;
+  margin: auto;
+  padding-bottom: 1rem;
+}
+/* R3 graphical component */
+.naproject {
+  width: 80%;
+  display: block;
+  margin: auto;
+  padding-bottom: 1rem;
+}
+
+/* layout change for over 991px from column to row */
+@media screen and (min-width: 991px) {
+  #projectmain {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .projects {
+    flex: 1;
+    height: 50%;
+    margin-top: 2rem;
+    text-align: center;
+  }
+
+  .projects > a {
+    margin: auto;
+  }
+
+  .footerbottom {
+  position: absolute;
+  padding-top: 2rem;
+  bottom: 0;
+  width: 100%;
+  border-top: 1px solid gray;
+}
+}
+
+/* Below is for blogs page */
+.blogcontainer {
+  width: 100vw;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+/* R2/R3, text and graphical component located in cards. */
+.card {
+  width: 15rem;
+  background: lightgray;
+  padding: 1rem;
+  margin: 1rem;
+  border: 1px solid black;
+  border-radius: 5%;
+}
+
+.card-header {
+  font-size: clamp(1.5rem, 2vw + 0.75rem, 2rem);
+  margin-bottom: 0.5rem;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  color: black;
+}
+
+.authordate {
+  font-size: clamp(.8rem, 2vw + 0.65rem, 1.2rem);
+  text-align: center;
+  color: black;
+}
+
+.card-body {
+  display: flex;
+  justify-content: center;
+}
+
+.card-main {
+  text-align: center;
+  font-size: clamp(0.8rem, 2vw + 0.5rem, 1.75rem);
+  color: black;
+}
+
+.card-footer {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+}
+
+.btn {
+  color: black;
+  padding: .25rem;
+  border: 1px solid black;
+}
+
+.blogpic {
+  width: 150px;
+  height: 150px;
+}
+
+
+/* Card size changes once it hits 500px and up to 991px */
+@media screen and (min-width: 500px) and (max-width: 991px) {
+  .card {
+    width: 20rem;
+  }
+}
+/* Cards once again get larger when it hits 992px. Also added margin so they're not grouped together and have some spacing. */
+@media screen and (min-width: 992px) {
+  .card {
+    width: 25rem;
+    margin: 2rem;
+  }
+}
+
+/* Below is for the 5 blog pages  */
+.fiveblogpagecontainers {
+width: 100vw;
+height: 100%;
+}
+
+.fiveblogpagearticle {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.fiveblogpagetext {
+  padding: 2rem;
+  margin: 2rem;
+  background-color: var(--bg-color);
+  font-size: var(--font-size);
+}
+/* R3 graphical component. */
+.blogimg {
+  height: 300px;
+  width: 300px;
+  margin: 2rem;
+}
+
+.blogtitle {
+  text-align: center;
+}
+
+@media screen and (min-width: 992px) {
+  .fiveblogpagearticle {
+    display: flex;
+    flex-direction: row-reverse;
+    flex-wrap: nowrap;
+    padding: 1rem;
+    margin: 2rem;
+  }
+
+.blogimg {
+ height: 350px;
+ width: 350px; 
+}
+}
