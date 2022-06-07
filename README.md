@@ -1,8 +1,8 @@
 # T1A2 Portfolio Website - By Christopher Back #
 
-**Portfolio website located here: [Portfolio](https://lucky-wisp-ae7b80.netlify.app/)**
+**Portfolio website located here: [Portfolio](https://chrisback2021.github.io/T1A2/)**
 
-**Github repo located here: [Github](https://github.com/storm0105/T1A2)**
+**Github repo located here: [Github](https://github.com/ChrisBack2021/T1A2)**
 
 ## Purpose ##
 
@@ -68,7 +68,7 @@ The target audience for my portfolio website are developers and prospective empl
 By making it responsive to all screen sizes, it allows prospective employers to have a look at my portfolio on the go or at their desk.
 
 ## Tech Stack ##
-I started by creating wireframes using Balsamiq Wireframes, which was then followed up by basic HTML and CSS. Only HTML and CSS was used in the creation of this portfolio and it was uploaded to Github every time I hit a milestone. Once the site was finished, it was deployed on Netlify.
+I started by creating wireframes using Balsamiq Wireframes, which was then followed up by basic HTML and CSS. Only HTML and CSS was used in the creation of this portfolio and it was uploaded to Github every time I hit a milestone. It was also deployed regularly to Github pages to check that everything was working as intended.
 
 
 
