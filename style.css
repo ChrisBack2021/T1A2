@@ -1,8 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&display=swap");
+
 /* Below are variables used throughout css */
 :root {
   --bg-color: rgba(128, 129, 129, 0.2);
-  --font-size: clamp( 0.6rem, 2vw + .75rem, 1.7rem);
+  --font-size: clamp(0.6rem, 2vw + .75rem, 1.7rem);
 }
 
 /* R2 text component, font family and color. R3 graphical component, background image for all pages. */
@@ -22,7 +23,7 @@ a {
 }
 
 html a:hover {
- color: blueviolet;
+  color: blueviolet;
   transform: scale(1.10);
   transition: 0.3s;
 }
@@ -35,11 +36,11 @@ html a:hover {
 }
 
 h1 {
-  font-size: clamp( 2rem, 6vw + 2rem, 6rem);
+  font-size: clamp(2rem, 6vw + 2rem, 6rem);
 }
 
 h2 {
-  font-size: clamp( 1rem, 1.5vw + 1rem, 4rem);
+  font-size: clamp(1rem, 1.5vw + 1rem, 4rem);
 }
 
 
@@ -50,7 +51,7 @@ h2 {
   flex-direction: column;
 }
 
-#navigation > li {
+#navigation>li {
   list-style-type: none;
   padding: 0.5rem;
   display: flex;
@@ -60,29 +61,31 @@ h2 {
 
 /* home page navigation switches from  column to row once it hits 992px*/
 @media screen and (min-width: 992px) {
-    #navigation {
+  #navigation {
     flex-direction: row;
     color: white;
   }
-  #navigation > li {
+
+  #navigation>li {
     padding-right: 5rem;
     padding-left: 5rem;
   }
 }
+
 /* dropdown menu for navbar. The dropdown only applies for About me page, project and blogs. */
- /* Text component, second nav bar for about me, projects and blog. */
-.listtop > li {
+/* Text component, second nav bar for about me, projects and blog. */
+.listtop>li {
   list-style: none;
   position: relative;
   background-color: (0, 0, 0, 0.1);
 }
 
-.listtop > li {
-  background-color: (0,0,0,0.1);
+.listtop>li {
+  background-color: (0, 0, 0, 0.1);
 }
 
-.listtop > li:hover {
-   color: blueviolet;
+.listtop>li:hover {
+  color: blueviolet;
   transform: scale(1.1);
   transition: 0.3s;
 }
@@ -91,24 +94,26 @@ h2 {
   border: 1px solid white;
 }
 
-.dropdownnav > li > ul {
+.dropdownnav>li>ul {
   display: none;
   position: absolute;
   padding: 1rem;
 }
+
 /* Below is for my dropdown menu to be able to be opened.  */
 @media screen and (max-width: 600px) {
-  .dropdownnav > li:focus-within > ul {
+  .dropdownnav>li:focus-within>ul {
     display: block;
   }
 }
-  /* The below changes the dropdown navbar to a navbar that is evenly spaced at top of screen. */
-  @media screen and (min-width: 601px){
-   .dropdownimg {
+
+/* The below changes the dropdown navbar to a navbar that is evenly spaced at top of screen. */
+@media screen and (min-width: 601px) {
+  .dropdownimg {
     display: none;
   }
 
-  .dropdownnav > li > ul {
+  .dropdownnav>li>ul {
     display: flex;
     position: relative;
     justify-content: space-between;
@@ -116,7 +121,8 @@ h2 {
     list-style: none;
     font-size: 2rem;
   }
-/* R3 graphical component, background color for navbar. */
+
+  /* R3 graphical component, background color for navbar. */
   .listtop {
     background-color: var(--bg-color);
   }
@@ -142,6 +148,7 @@ footer {
   display: flex;
   justify-content: center;
 }
+
 /* R3 graphical component, icons for socials. */
 .contact-me {
   padding: 1rem;
@@ -162,6 +169,7 @@ footer {
   justify-content: center;
   align-items: center;
 }
+
 /* R2 text component - name */
 header {
   font-size: clamp(1.25rem, 4vw + 0.075rem, 2.5rem);
@@ -179,6 +187,7 @@ header {
 a {
   text-decoration: none;
 }
+
 /* Contact details */
 #phoneandemail {
   margin-top: 5rem;
@@ -190,19 +199,22 @@ a {
   h1 {
     font-size: 6rem;
   }
-  
+
   #navigation {
     font-size: 2rem;
   }
+
   .contact-me img {
     width: 3rem;
   }
+
   .contact-me {
     gap: 5rem;
   }
-#phoneandemail {
-  margin-top: 20rem;
-}
+
+  #phoneandemail {
+    margin-top: 20rem;
+  }
 }
 
 /* Below is "about me" page* */
@@ -212,6 +224,7 @@ a {
   justify-content: center;
   padding: 0 2rem;
 }
+
 /* R2 text component */
 #about-me-page h2 {
   padding-top: 1rem;
@@ -220,13 +233,15 @@ a {
   text-align: center;
   font-weight: bolder;
 }
+
 /* R3 graphical component */
 #pictureofme {
   border-radius: 5%;
-    width: 15rem;
-    height: 20rem;
-    margin-bottom: 1rem;
-  }
+  width: 15rem;
+  height: 20rem;
+  margin-bottom: 1rem;
+}
+
 /* R3 graphical component */
 #bluemountain {
   border-radius: 50%;
@@ -240,12 +255,14 @@ h3 {
   text-align: center;
   padding-top: 5em;
 }
+
 /* R2 text component */
 #intro {
-background-color: var(--bg-color);
-padding: 0.5rem;
-font-size: var(--font-size);
+  background-color: var(--bg-color);
+  padding: 0.5rem;
+  font-size: var(--font-size);
 }
+
 /* R2 text component */
 #myprolife,
 #hobbies {
@@ -266,7 +283,7 @@ font-size: var(--font-size);
   color: white;
   display: flex;
   justify-content: center;
-  
+
 }
 
 /* larger display for about me page */
@@ -281,6 +298,7 @@ font-size: var(--font-size);
     width: 50%;
     text-align: center;
   }
+
   #myprolife {
     margin-right: 4rem;
   }
@@ -295,6 +313,7 @@ font-size: var(--font-size);
     width: 22rem;
     height: 29rem;
   }
+
   #bluemountain {
     width: 25rem;
     height: 35rem;
@@ -313,6 +332,7 @@ font-size: var(--font-size);
 .projectinfo {
   background-color: var(--bg-color);
 }
+
 /* R3 graphical component */
 #gardensnsd {
   width: 80%;
@@ -320,6 +340,7 @@ font-size: var(--font-size);
   margin: auto;
   padding-bottom: 1rem;
 }
+
 /* R3 graphical component */
 .naproject {
   width: 80%;
@@ -343,17 +364,17 @@ font-size: var(--font-size);
     text-align: center;
   }
 
-  .projects > a {
+  .projects>a {
     margin: auto;
   }
 
   .footerbottom {
-  position: absolute;
-  padding-top: 2rem;
-  bottom: 0;
-  width: 100%;
-  border-top: 1px solid gray;
-}
+    position: absolute;
+    padding-top: 2rem;
+    bottom: 0;
+    width: 100%;
+    border-top: 1px solid gray;
+  }
 }
 
 /* Below is for blogs page */
@@ -365,6 +386,7 @@ font-size: var(--font-size);
   flex-wrap: wrap;
   justify-content: center;
 }
+
 /* R2/R3, text and graphical component located in cards. */
 .card {
   width: 15rem;
@@ -425,6 +447,7 @@ font-size: var(--font-size);
     width: 20rem;
   }
 }
+
 /* Cards once again get larger when it hits 992px. Also added margin so they're not grouped together and have some spacing. */
 @media screen and (min-width: 992px) {
   .card {
@@ -435,8 +458,8 @@ font-size: var(--font-size);
 
 /* Below is for the 5 blog pages  */
 .fiveblogpagecontainers {
-width: 100vw;
-height: 100%;
+  width: 100vw;
+  height: 100%;
 }
 
 .fiveblogpagearticle {
@@ -451,6 +474,7 @@ height: 100%;
   background-color: var(--bg-color);
   font-size: var(--font-size);
 }
+
 /* R3 graphical component. */
 .blogimg {
   height: 300px;
@@ -471,8 +495,11 @@ height: 100%;
     margin: 2rem;
   }
 
-.blogimg {
- height: 350px;
- width: 350px; 
+  .blogimg {
+    height: 350px;
+    width: 350px;
+  }
 }
-}
+
+
+/* <p class="contactUs">Contact us</p><a href="#" id="socialLink">Twitter</a><a href="#" id="socialLink">Email us</a> */
